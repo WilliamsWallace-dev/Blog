@@ -1,0 +1,78 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+//Header
+.header-container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 8px 24px;
+  input{
+    line-height: 1.7rem;
+    padding: 0px 1rem;
+    min-width: 460px;
+
+    background: $black-light;
+    border: none;
+    border-radius: .1rem;
+    
+    // &::placeholder::before{
+    //   content: " adsda";
+    //   color: white;
+    //   display: inline-block;
+    //   width: 15px;
+    //   height: 15px;
+      
+    // }
+  }
+
+
+  .nav-link{
+    display: flex;
+    a{
+      font-family: "Poppins";
+      color: $gray-7;
+      font-size: 0.825rem;
+  
+      cursor: pointer;
+  
+      transition: .5s ease;
+      &:hover{
+        opacity: .7;
+      }
+    }
+  }
+
+}
+
+//Article
+.article-container{
+  display: grid;
+  grid-template-columns: repeat(auto-fill,minmax(394px,1fr));
+}
+
+//Post
+
+.post-container{
+
+  .post-image{
+    max-width: 100%;
+    height: 230px;
+    background: $black-light;
+    border-radius: .5rem;
+  }
+
+  .inf-container{
+    display: flex;
+  }
+  .post-image-perfil{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: $gray-1;
+  }
+
+}
