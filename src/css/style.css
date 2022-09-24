@@ -724,6 +724,14 @@ body {
   background: #3e3f40;
 }
 
+.button-post-container {
+  color: red;
+  padding: 0.5rem 1rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
 .border {
   border: 1px solid red;
 }/*# sourceMappingURL=style.css.map */

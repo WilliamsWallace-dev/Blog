@@ -9,8 +9,8 @@ const Post = (props) => {
         <div className="inf-container mt-3">
           <div className = "post-image-perfil mr-2"></div>
           <div>
-            <h6 className = "color-blue-normal">Fulano de Tal</h6>
-            <p>Aug 2,2020 - 8 min read</p>
+            <h6 className = "color-blue-normal">{props.autor}</h6>
+            <p>{`${props.date} - ${props.timeReading}`}</p>
           </div>
         </div>
 

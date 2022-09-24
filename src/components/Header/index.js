@@ -5,7 +5,7 @@ const Header = () => {
     <>
       <section className="container header-container">
         <img src={logo} alt="Logo do Blog"></img>
-        <input type="text" name="search" placeHolder="Buscar artigos,podcasts,destaques..."></input>
+        <input type="text" name="search" placeholder="Buscar artigos,podcasts,destaques..."></input>
         <div className="nav-link ">
           <a className = "p-1" src="#">Categories</a>
           <a className = "p-1" src="#">About</a>
