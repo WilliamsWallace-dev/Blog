@@ -1,6 +1,7 @@
 import logo from "../../svg/logo.svg";
 
 const Header = () => {
+  console.log("renderizei Header")
   return (
     <>
       <section className="container header-container">

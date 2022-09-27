@@ -39,6 +39,36 @@
       "author": "Lorenzo",
       "date": "Dec 22, 2022",
       "time": "6 min read"
+    },
+    {
+      "id": "5",
+      "category": "Tecnologia",
+      "title": "Desenvolvedores no brasil",
+      "resume": "Vagas para desenvolvedores nas melhores empresas do Vale do Silício. As melhores empresas dos EUA contratam desenvolvedores da Turing. Salário mais alto. 100% remoto.",
+      "description": "Post 1 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Post 1 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "author": "Fulano de tal",
+      "date": "Aug 2, 2020",
+      "ime": "8 min read"
+    },
+    {
+      "id": "6",
+      "category": "Emprego",
+      "title": "Desenvolvedores no Brasil",
+      "resume": "Vagas para desenvolvedores nas melhores empresas do Vale do Silício. As melhores empresas dos EUA contratam desenvolvedores da Turing. Salário mais alto. 100% remoto.",
+      "description": "Post 1 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Post 1 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "author": "Fulano de tal",
+      "date": "Aug 2, 2020",
+      "ime": "8 min read"
+    },
+    {
+      "id": "7",
+      "category": "Jogos",
+      "title": "Ultimos jogos lancados em 2022",
+      "resume": "O ano de 2022 ainda reserva vários grandes lançamentos de games ... Nintendo Switch Sports, nova versão do jogo que fez sucesso no Wii,",
+      "description": "Post 1 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Post 1 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "author": "Fulano de tal",
+      "date": "Aug 2, 2020",
+      "ime": "8 min read"
     }
   ]
 }

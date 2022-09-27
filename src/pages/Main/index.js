@@ -1,26 +1,29 @@
 import Post from "../../components/Post";
-import {useState} from "react";
-import api from "../../services/api"
+import Formulario from "../../components/Formulario"
 
-const Main = ()=>{
 
-  const [posts,setPosts] = useState([]);
+const Main = ({posts,setPosts})=>{
 
-  window.onload = creatMain;
+  
 
-  async function creatMain (){
-      try {
-        const response = await api.get('http://localhost:4000/posts');
-        setPosts(response.data)
-        console.log(response.data)
-      } catch (error) {
-        console.error(error);
-      }
-    }
+  // window.onload = creatMain;
+
+  // async function creatMain (){
+  //     try {
+  //       const response = await api.get('http://localhost:4000/posts');
+  //       setPosts(response.data);
+  //     } catch (error) {
+  //       console.error(error);
+  //     }
+  //   }
+
+      
+
 
   return(
     <>
     <section className="container mt-8">
+    <Formulario></Formulario>
       <h1>Articles</h1>
       <div className="article-container mx-1">
         {
@@ -32,7 +35,7 @@ const Main = ()=>{
             )
           })
         }
-
+        
         {/* <button className="button-post-container" onClick={creatMain}>CliqueAqui</button> */}
       </div>
     </section>
