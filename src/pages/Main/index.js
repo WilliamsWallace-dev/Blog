@@ -1,10 +1,12 @@
 import Post from "../../components/Post";
 import Formulario from "../../components/Formulario"
 
+import {BlogContext} from "../../context/blog"
+import {useContext} from "react"
 
-const Main = ({posts,setPosts})=>{
+const Main = ()=>{
 
-  
+  const {posts,setPosts} = useContext(BlogContext);
 
   // window.onload = creatMain;
 

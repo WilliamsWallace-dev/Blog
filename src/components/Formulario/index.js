@@ -1,31 +1,29 @@
 import api from "../../services/api"
-import { useEffect,useState } from "react";
+import { useEffect,useState,useContext } from "react";
+
+import {BlogContext} from "../../context/blog"
 
 
 const Formulario = ()=>{
 
-  console.log("renderizei Form")
+  const {posts} = useContext(BlogContext);
+
   
-  let [qtdPosts,setQtdPosts] = useState(0);
+
+ console.log("renderizei Form ")
+
+  
+  
   let formulario = [];
-  useEffect(()=>{
-    api.get('http://localhost:4000/posts')
-    .then((response)=>{
-      setQtdPosts(response.data.length);
-    })
-    .catch((error)=>{
-      console.log(error);
-    })
-},[])
 
   const addPost = ()=>{
         document.querySelectorAll(".formulario-container input").forEach((element,index)=>{
           formulario[index] = element.value
         })
         formulario[formulario.length] = document.querySelector('.formulario-container textarea').value;
-        console.log(qtdPosts)
+        console.log(posts.length)
         api.post('/posts', {
-        id : `${qtdPosts + 1}`,
+        id : `${posts.length + 1}`,
         category: `${formulario[1]}`,
         title: `${formulario[0]}`,
         resume: `${formulario[2]}`,
@@ -36,7 +34,6 @@ const Formulario = ()=>{
         })
         .then(function (response) {
           console.log(response);
-          setQtdPosts(qtdPosts + 1);
         })
         .catch(function (error) {
           console.log(error);
