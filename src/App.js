@@ -1,6 +1,8 @@
 import Header from "./components/Header";
 import Main from "./pages/Main/index.js"
-// import Article from "./components/Article";
+import Article from "./pages/Article";
+
+import BlogRoutes from "./routes/index";
 
 import {useState,useEffect} from "react";
 import api from "./services/api"
@@ -14,8 +16,7 @@ function App() {
   return (
     <>
       <BlogProvidor>
-        <Header></Header>
-        <Main></Main>
+        <BlogRoutes></BlogRoutes>
       </BlogProvidor>
       
     </>

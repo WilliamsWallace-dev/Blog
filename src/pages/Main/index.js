@@ -4,6 +4,7 @@ import Formulario from "../../components/Formulario"
 import {BlogContext} from "../../context/blog"
 import {useContext} from "react"
 
+
 const Main = ()=>{
 
   const {posts,setPosts} = useContext(BlogContext);
@@ -31,7 +32,7 @@ const Main = ()=>{
         {
           posts.map((post)=>{
             return(
-            <Post key = {post.id} subtitulo = {post.category} titulo = {post.title} date = {post.date} timeReading = {post.time}>
+            <Post key = {post.id} id={post.id} category = {post.category} title = {post.title} date = {post.date} time = {post.time} author = {post.author}>
               {post.resume}
             </Post>
             )

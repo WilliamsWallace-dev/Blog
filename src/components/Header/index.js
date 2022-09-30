@@ -1,4 +1,5 @@
 import logo from "../../svg/logo.svg";
+import { Link,Outlet } from "react-router-dom";
 
 const Header = () => {
   console.log("renderizei Header")
@@ -13,6 +14,7 @@ const Header = () => {
           <a className = "p-1" src="#">Contact</a>
         </div>
       </section>
+      <Outlet></Outlet>
     </>
   );
 };
