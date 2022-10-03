@@ -11,7 +11,7 @@ const Header = () => {
         <div className="nav-link ">
           <a className = "p-1" src="#">Categories</a>
           <a className = "p-1" src="#">About</a>
-          <a className = "p-1" src="#">Contact</a>
+          <a className = "p-1" src="#">Login</a>
         </div>
       </section>
       <Outlet></Outlet>

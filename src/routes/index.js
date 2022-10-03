@@ -14,15 +14,15 @@ const BlogRoutes = ()=>{
     <>
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Header/>}>
-          <Route index element= {<Main/>} ></Route>
+        <Route   path="/" element={<Header/>}>
+          <Route  index element= {<Main/>} ></Route>
           {
             posts.map((post)=>{
               let id = JSON.stringify(post.id);
               
               return (
                 <>
-                  <Route path ={`articles/${id}`} element = {<Article key = {post.id} id={post.id} category={post.category} title={post.title}  resume={post.resume}  description={post.description}  author={post.author}  date={post.date}  time={post.date}></Article>} ></Route>
+                  <Route  path ={`articles/${id}`}  element = {<Article id={post.id} category={post.category} title={post.title}  resume={post.resume}  description={post.description}  author={post.author}  date={post.date}  time={post.date}></Article>} ></Route>
                 </>
                 )
               })

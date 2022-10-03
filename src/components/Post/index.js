@@ -17,7 +17,6 @@ const Post = (props) => {
           </div>
         </div>
       </section>
-      <Outlet></Outlet>
     </>
   );
 };

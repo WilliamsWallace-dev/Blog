@@ -70,5 +70,14 @@
       "date": "Aug 2, 2020",
       "time": "8 min read"
     }
+  ],
+  "users":[
+    {
+      "id" : 1,
+      "username": "Admin123",
+      "password": "Admin123",
+      "name": "Administrador",
+      "login":false
+    }
   ]
 }

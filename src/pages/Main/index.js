@@ -1,5 +1,6 @@
 import Post from "../../components/Post";
 import Formulario from "../../components/Formulario"
+import FormLogin from "../../components/FormLogin";
 
 import {BlogContext} from "../../context/blog"
 import {useContext} from "react"
@@ -26,6 +27,7 @@ const Main = ()=>{
   return(
     <>
     <section className="container mt-8">
+    <FormLogin></FormLogin>
     <Formulario></Formulario>
       <h1>Articles</h1>
       <div className="article-container mx-1">
