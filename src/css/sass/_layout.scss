@@ -9,6 +9,7 @@
   justify-content: space-between;
   align-items: center;
 
+
   padding: 8px 24px;
   input{
     line-height: 1.7rem;
@@ -28,11 +29,32 @@
       
     // }
   }
+  button{
+    background : transparent;
+    border : none;
+    font-family: "Poppins";
+    color: $gray-7;
+    font-size: 0.825rem;
+    // border: 1px solid red;
 
+    &::after{
+      content: "";
+      display: inline-block;
+      background-image: url("../svg/Arrow-Down.svg");
+      background-repeat: no-repeat;
+      background-size:cover;
+      margin-left: 8px;
+      width: .6rem;
+      height: .5rem;
 
-  .nav-link{
+      
+    }
+  }
+
+  .nav-link-container{
     display: flex;
-    a{
+    position: relative;
+    .nav-link{
       font-family: "Poppins";
       color: $gray-7;
       font-size: 0.825rem;
@@ -43,6 +65,35 @@
       &:hover{
         opacity: .7;
       }
+    }
+    .nav-menu-user{
+      display: flex;
+      flex-direction: column;
+  
+      position: absolute;
+      right: 0px;
+      top:30px;
+
+      max-width: 0px;
+      max-height: 0px;
+
+
+      overflow: hidden;
+
+      transition: .3s ease-in-out;
+      
+      .nav-link{
+        padding: .25rem 0 ;
+      }
+    }
+
+    .active-nav-menu-user{
+      max-width:100%;
+      max-height:100px;
+      padding: .5rem .8rem;
+      border: 1px solid white;
+
+      transition: .5s ease-in-out;
     }
   }
 
@@ -75,19 +126,6 @@
     background: $gray-1;
   }
 
-}
-
-
-
-
-//test
-
-.button-post-container{
-  color:red;
-  padding: .5rem 1rem;
-  background: transparent;
-  border: none;
-  cursor: pointer;
 }
 
 //Formulario 

@@ -689,18 +689,57 @@ body {
   border: none;
   border-radius: 0.1rem;
 }
-.header-container .nav-link {
-  display: flex;
+.header-container button {
+  background: transparent;
+  border: none;
+  font-family: "Poppins";
+  color: #a5a6a8;
+  font-size: 0.825rem;
 }
-.header-container .nav-link a {
+.header-container button::after {
+  content: "";
+  display: inline-block;
+  background-image: url("../svg/Arrow-Down.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-left: 8px;
+  width: 0.6rem;
+  height: 0.5rem;
+}
+.header-container .nav-link-container {
+  display: flex;
+  position: relative;
+}
+.header-container .nav-link-container .nav-link {
   font-family: "Poppins";
   color: #a5a6a8;
   font-size: 0.825rem;
   cursor: pointer;
   transition: 0.5s ease;
 }
-.header-container .nav-link a:hover {
+.header-container .nav-link-container .nav-link:hover {
   opacity: 0.7;
+}
+.header-container .nav-link-container .nav-menu-user {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  right: 0px;
+  top: 30px;
+  max-width: 0px;
+  max-height: 0px;
+  overflow: hidden;
+  transition: 0.3s ease-in-out;
+}
+.header-container .nav-link-container .nav-menu-user .nav-link {
+  padding: 0.25rem 0;
+}
+.header-container .nav-link-container .active-nav-menu-user {
+  max-width: 100%;
+  max-height: 100px;
+  padding: 0.5rem 0.8rem;
+  border: 1px solid white;
+  transition: 0.5s ease-in-out;
 }
 
 .article-container {
@@ -722,14 +761,6 @@ body {
   height: 50px;
   border-radius: 50%;
   background: #3e3f40;
-}
-
-.button-post-container {
-  color: red;
-  padding: 0.5rem 1rem;
-  background: transparent;
-  border: none;
-  cursor: pointer;
 }
 
 .formulario-container input {

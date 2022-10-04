@@ -27,8 +27,6 @@ const Main = ()=>{
   return(
     <>
     <section className="container mt-8">
-    <FormLogin></FormLogin>
-    <Formulario></Formulario>
       <h1>Articles</h1>
       <div className="article-container mx-1">
         {

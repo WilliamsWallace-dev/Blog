@@ -4,6 +4,8 @@ import { useContext } from "react";
 import Main from "../pages/Main"
 import Article from "../pages/Article"
 import Header from "../components/Header"
+import FormLogin from "../components/FormLogin";
+import Formulario from "../components/Formulario";
 
 import { BlogContext } from "../context/blog";
 
@@ -16,6 +18,9 @@ const BlogRoutes = ()=>{
       <Routes>
         <Route   path="/" element={<Header/>}>
           <Route  index element= {<Main/>} ></Route>
+          <Route  path="login"element= {<FormLogin/>} ></Route>
+          <Route  path="gerenciarPosts"element= {<Formulario/>} ></Route>
+
           {
             posts.map((post)=>{
               let id = JSON.stringify(post.id);

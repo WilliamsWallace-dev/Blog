@@ -2,6 +2,8 @@ import api from "../../services/api"
 import {useState,useEffect,useContext} from "react"
 import { BlogContext } from "../../context/blog"
 
+import Main from "../../pages/Main"
+
 
 function FormLogin (){
 
@@ -16,14 +18,14 @@ function FormLogin (){
       inputs[index] = element.value;
 
     })
-    users.forEach((element,index)=>{
+    users.forEach((element,index,users)=>{
       if(element.username === inputs[0] && element.password === inputs[1]){
         setUserOn(element);
+        console.log(userOn)
+      }else if(index === (users.length-1) && !userOn){
+        setUserOn("Error");
       }
     })
-    if(!userOn){
-      setUserOn("Error");
-    }
   }
 
   if(userOn === "Error"){
@@ -54,7 +56,8 @@ function FormLogin (){
           }else{
             return(
             <>
-            <h1>Ola {userOn.username}</h1>
+            <Main>
+            </Main>
             </>
           )
   }
