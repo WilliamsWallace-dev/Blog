@@ -1,13 +1,15 @@
-import {BrowserRouter,json,Route,Routes} from "react-router-dom";
+import {BrowserRouter,Route,Routes} from "react-router-dom";
 import { useContext } from "react";
 
 import Main from "../pages/Main"
 import Article from "../pages/Article"
 import Header from "../components/Header"
 import FormLogin from "../components/FormLogin";
-import Formulario from "../components/Formulario";
+import AddPost from "../components/Formulario/addPost";
+import RemovePost from "../components/Formulario/removePost";
 
 import { BlogContext } from "../context/blog";
+import HeaderForm from "../components/HeaderForm";
 
 const BlogRoutes = ()=>{
 
@@ -19,7 +21,11 @@ const BlogRoutes = ()=>{
         <Route   path="/" element={<Header/>}>
           <Route  index element= {<Main/>} ></Route>
           <Route  path="login"element= {<FormLogin/>} ></Route>
-          <Route  path="gerenciarPosts"element= {<Formulario/>} ></Route>
+          <Route  path="gerenciarPosts/"element= {<HeaderForm/>} >
+            <Route  index element= {<AddPost/>} ></Route>
+            <Route  path="removePost"element= {<RemovePost/>} ></Route>
+            <Route  path="editePost"element= {<AddPost/>} ></Route>
+          </Route>
 
           {
             posts.map((post)=>{

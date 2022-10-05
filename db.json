@@ -69,15 +69,37 @@
       "author": "Fulano de tal",
       "date": "Aug 2, 2020",
       "time": "8 min read"
+    },
+    {
+      "id": "8",
+      "category": "Jogos",
+      "title": "titan o jogo",
+      "subtitle": "titan de agua",
+      "resume": "Wallace",
+      "description": "2022-11-05",
+      "author": "10",
+      "date": "Jogo de titans é baseado nos titants",
+      "time": "undefined"
+    },
+    {
+      "id": "9",
+      "category": "aaaaaa",
+      "title": "aaaaaa",
+      "subtitle": "aaaa",
+      "resume": "aaaaaaa",
+      "description": "2022-10-20",
+      "author": "5",
+      "date": "aaaaaaaaaaaa",
+      "time": "undefined"
     }
   ],
-  "users":[
+  "users": [
     {
-      "id" : 1,
+      "id": 1,
       "username": "Admin123",
       "password": "Admin123",
       "name": "Administrador",
-      "login":false
+      "login": false
     }
   ]
 }

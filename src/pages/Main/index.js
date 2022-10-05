@@ -1,5 +1,5 @@
 import Post from "../../components/Post";
-import Formulario from "../../components/Formulario"
+import Formulario from "../../components/Formulario/addPost"
 import FormLogin from "../../components/FormLogin";
 
 import {BlogContext} from "../../context/blog"
