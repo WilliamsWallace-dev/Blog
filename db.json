@@ -71,7 +71,7 @@
       "time": "8 min read"
     },
     {
-      "id": "8",
+      "id": 8,
       "category": "Jogos",
       "title": "titan o jogo",
       "subtitle": "titan de agua",
@@ -79,17 +79,6 @@
       "description": "2022-11-05",
       "author": "10",
       "date": "Jogo de titans é baseado nos titants",
-      "time": "undefined"
-    },
-    {
-      "id": "9",
-      "category": "aaaaaa",
-      "title": "aaaaaa",
-      "subtitle": "aaaa",
-      "resume": "aaaaaaa",
-      "description": "2022-10-20",
-      "author": "5",
-      "date": "aaaaaaaaaaaa",
       "time": "undefined"
     }
   ],

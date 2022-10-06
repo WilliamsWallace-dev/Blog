@@ -1,6 +1,4 @@
 import Post from "../../components/Post";
-import Formulario from "../../components/Formulario/addPost"
-import FormLogin from "../../components/FormLogin";
 
 import {BlogContext} from "../../context/blog"
 import {useContext} from "react"
@@ -39,7 +37,6 @@ const Main = ()=>{
           })
         }
         
-        {/* <button className="button-post-container" onClick={creatMain}>CliqueAqui</button> */}
       </div>
     </section>
     </>

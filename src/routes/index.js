@@ -6,7 +6,7 @@ import Article from "../pages/Article"
 import Header from "../components/Header"
 import FormLogin from "../components/FormLogin";
 import AddPost from "../components/Formulario/addPost";
-import RemovePost from "../components/Formulario/removePost";
+import GerenciarPost from "../components/Formulario/gerenciarPost";
 
 import { BlogContext } from "../context/blog";
 import HeaderForm from "../components/HeaderForm";
@@ -22,9 +22,8 @@ const BlogRoutes = ()=>{
           <Route  index element= {<Main/>} ></Route>
           <Route  path="login"element= {<FormLogin/>} ></Route>
           <Route  path="gerenciarPosts/"element= {<HeaderForm/>} >
-            <Route  index element= {<AddPost/>} ></Route>
-            <Route  path="removePost"element= {<RemovePost/>} ></Route>
-            <Route  path="editePost"element= {<AddPost/>} ></Route>
+            <Route  index element= {<GerenciarPost/>} ></Route>
+            <Route  path="addPost"element= {<AddPost/>} ></Route>
           </Route>
 
           {

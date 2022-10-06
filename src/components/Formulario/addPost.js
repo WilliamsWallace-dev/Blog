@@ -6,7 +6,7 @@ import {BlogContext} from "../../context/blog"
 
 const AddPost = ()=>{
 
-  const {posts} = useContext(BlogContext);
+  const {posts,setPosts} = useContext(BlogContext);
 
   
 
@@ -19,22 +19,39 @@ const AddPost = ()=>{
   const add = ()=>{
         document.querySelectorAll(".formulario-container input").forEach((element,index)=>{
           formulario[index] = element.value
+          element.value = "";
         })
-        formulario[formulario.length] = document.querySelector('.formulario-container textarea').value;
-        console.log(posts.length)
+        // formulario[formulario.length] = document.querySelectorAll('.formulario-container textarea').value;
+        // formulario = [...formulario,...document.querySelectorAll('.formulario-container textarea')]
+        document.querySelectorAll('.formulario-container textarea').forEach((element,index)=>{
+          formulario = [...formulario,element.value]
+          element.value = "";
+        })
+        console.log(formulario)
         api.post('/posts', {
-        id : `${posts.length + 1}`,
+        id : posts.length + 1 ,
         category: `${formulario[0]}`,
         title: `${formulario[1]}`,
         subtitle: `${formulario[2]}`,
-        resume: `${formulario[3]}`,
-        description: `${formulario[4]}`,
-        author: `${formulario[5]}`,
-        date: `${formulario[6]}`,
-        time: `${formulario[7]}`,
+        author: `${formulario[3]}`,
+        date: `${formulario[4]}`,
+        time: `${formulario[5]}`,
+        resume: `${formulario[6]}`,
+        description: `${formulario[7]}`
         })
         .then(function (response) {
           console.log(response);
+          setPosts([...posts,{
+            id : posts.length + 1 ,
+            category : `${formulario[0]}`,
+            title: `${formulario[1]}`,
+            subtitle: `${formulario[2]}`,
+            resume: `${formulario[3]}`,
+            description: `${formulario[4]}`,
+            author: `${formulario[5]}`,
+            date: `${formulario[6]}`,
+            time: `${formulario[7]}`,
+            }])
         })
         .catch(function (error) {
           console.log(error);

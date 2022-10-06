@@ -4,9 +4,10 @@ function HeaderForm () {
   return(
   <>
   <section>
-    <Link className="p-2" to="/gerenciarPosts">Adicionar Artigo</Link>
-    <Link className="p-2" to="/gerenciarPosts/editePost">Editar Artigo</Link>
-    <Link className="p-2" to="/gerenciarPosts/removePost">Remover Artigo</Link>
+      <h1>Remover Post</h1>
+      <input type = "text" placeholder="Pesquisar"></input>
+    <Link className="p-2" to="/gerenciarPosts">Gerenciar Artigo</Link>
+    <Link className="p-2" to="/gerenciarPosts/addPost">Adicionar Artigo</Link>
     <Outlet></Outlet>
   </section>
   </>
