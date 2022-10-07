@@ -6,7 +6,7 @@ const Post = (props) => {
     <>
       <section className= "post-container p-1">
         <div className="post-image mb-2"></div>
-        <h5>{props.category}</h5>
+        <h5 style = {{display : "inline-block"}}>{props.category}</h5>
         <Link to={`/articles/${id}`}><h3>{props.title}</h3></Link>
         <p>{props.children}</p>
         <div className="inf-container mt-3">

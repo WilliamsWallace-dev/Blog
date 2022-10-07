@@ -32,26 +32,24 @@ const AddPost = ()=>{
         id : posts.length + 1 ,
         category: `${formulario[0]}`,
         title: `${formulario[1]}`,
-        subtitle: `${formulario[2]}`,
-        author: `${formulario[3]}`,
-        date: `${formulario[4]}`,
-        time: `${formulario[5]}`,
-        resume: `${formulario[6]}`,
-        description: `${formulario[7]}`
+        author: `${formulario[2]}`,
+        date: `${formulario[3]}`,
+        time: `${formulario[4]}`,
+        resume: `${formulario[5]}`,
+        description: `${formulario[6]}`
         })
         .then(function (response) {
           console.log(response);
           setPosts([...posts,{
             id : posts.length + 1 ,
-            category : `${formulario[0]}`,
-            title: `${formulario[1]}`,
-            subtitle: `${formulario[2]}`,
-            resume: `${formulario[3]}`,
-            description: `${formulario[4]}`,
-            author: `${formulario[5]}`,
-            date: `${formulario[6]}`,
-            time: `${formulario[7]}`,
-            }])
+        category: `${formulario[0]}`,
+        title: `${formulario[1]}`,
+        author: `${formulario[2]}`,
+        date: `${formulario[3]}`,
+        time: `${formulario[4]}`,
+        resume: `${formulario[5]}`,
+        description: `${formulario[6]}`
+        }])
         })
         .catch(function (error) {
           console.log(error);
@@ -67,8 +65,6 @@ const AddPost = ()=>{
         <label>Category</label>
         <input type="text" placeholder="Category"></input>
         <label>Titulo</label>
-        <input type="text" placeholder="Titulo"></input>
-        <label>Subtitulo</label>
         <input type="text" placeholder="Subtitulo"></input>
         <label>Resume</label>
         <textarea rows="4" cols="50" placeholder="Resume"></textarea>

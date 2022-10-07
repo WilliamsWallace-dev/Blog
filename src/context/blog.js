@@ -10,7 +10,6 @@ function BlogProvidor ({children}) {
   useEffect(()=>{
     api.get("http://localhost:4000/posts")
     .then((response)=>{
-      console.log(response)
       setPosts(response.data)
     })
     .catch((error)=>{console.log(error)})
