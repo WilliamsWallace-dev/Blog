@@ -681,22 +681,22 @@ body {
   align-items: center;
   padding: 8px 24px;
 }
-.header-container input {
+.header-container .header-search input {
   line-height: 1.7rem;
   padding: 0px 1rem;
   min-width: 460px;
   background: #15171a;
   border: none;
-  border-radius: 0.1rem;
+  border-radius: 1rem;
 }
-.header-container button {
+.header-container .button-user {
   background: transparent;
   border: none;
   font-family: "Poppins";
   color: #a5a6a8;
   font-size: 0.825rem;
 }
-.header-container button::after {
+.header-container .button-user::after {
   content: "";
   display: inline-block;
   background-image: url("../svg/Arrow-Down.svg");
@@ -710,17 +710,17 @@ body {
   display: flex;
   position: relative;
 }
-.header-container .nav-link-container .nav-link {
+.header-container .nav-link-container .nav-element {
   font-family: "Poppins";
   color: #a5a6a8;
   font-size: 0.825rem;
   cursor: pointer;
   transition: 0.5s ease;
 }
-.header-container .nav-link-container .nav-link:hover {
+.header-container .nav-link-container .nav-element:hover {
   opacity: 0.7;
 }
-.header-container .nav-link-container .nav-menu-user {
+.header-container .nav-link-container .nav-menu {
   display: flex;
   flex-direction: column;
   position: absolute;
@@ -731,10 +731,10 @@ body {
   overflow: hidden;
   transition: 0.3s ease-in-out;
 }
-.header-container .nav-link-container .nav-menu-user .nav-link {
+.header-container .nav-link-container .nav-menu .nav-link {
   padding: 0.25rem 0;
 }
-.header-container .nav-link-container .active-nav-menu-user {
+.header-container .nav-link-container .active-nav-menu {
   max-width: 100%;
   max-height: 100px;
   padding: 0.5rem 0.8rem;

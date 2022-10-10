@@ -1,6 +1,15 @@
 import {Link, Outlet} from "react-router-dom";
+import FormLogin from "../FormLogin/index"
+import {useContext} from "react"
+import { BlogContext } from "../../context/blog";
 
 function HeaderForm () {
+
+  const {userOn} = useContext(BlogContext);
+
+  if(!userOn || userOn === "Error"){
+    return (<FormLogin></FormLogin>)
+  }else{
   return(
   <>
   <section>
@@ -13,6 +22,7 @@ function HeaderForm () {
   </>
   
   )
+  }
 }
 
 export default HeaderForm;

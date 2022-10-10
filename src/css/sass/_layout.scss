@@ -11,31 +11,25 @@
 
 
   padding: 8px 24px;
-  input{
+
+  .header-search input{
+    
     line-height: 1.7rem;
     padding: 0px 1rem;
     min-width: 460px;
 
     background: $black-light;
     border: none;
-    border-radius: .1rem;
-    
-    // &::placeholder::before{
-    //   content: " adsda";
-    //   color: white;
-    //   display: inline-block;
-    //   width: 15px;
-    //   height: 15px;
-      
-    // }
-  }
-  button{
+    border-radius: 1rem;
+
+    }
+
+    .button-user{
     background : transparent;
     border : none;
     font-family: "Poppins";
     color: $gray-7;
     font-size: 0.825rem;
-    // border: 1px solid red;
 
     &::after{
       content: "";
@@ -54,7 +48,7 @@
   .nav-link-container{
     display: flex;
     position: relative;
-    .nav-link{
+    .nav-element{
       font-family: "Poppins";
       color: $gray-7;
       font-size: 0.825rem;
@@ -66,7 +60,7 @@
         opacity: .7;
       }
     }
-    .nav-menu-user{
+    .nav-menu{
       display: flex;
       flex-direction: column;
   
@@ -87,7 +81,7 @@
       }
     }
 
-    .active-nav-menu-user{
+    .active-nav-menu{
       max-width:100%;
       max-height:100px;
       padding: .5rem .8rem;

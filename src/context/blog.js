@@ -6,11 +6,25 @@ const BlogContext = createContext({});
 
 function BlogProvidor ({children}) {
 
+  let vetAux = [];
+
+  const [categories,setCategories] = useState([]);
+
+  const [search,setSearch] = useState([]);
+
   const [posts,setPosts] = useState([]);
   useEffect(()=>{
     api.get("http://localhost:4000/posts")
     .then((response)=>{
       setPosts(response.data)
+    })
+    .catch((error)=>{console.log(error)})
+  },[])
+
+  useEffect(()=>{
+    api.get("http://localhost:4000/categories")
+    .then((response)=>{
+      setCategories(response.data)
     })
     .catch((error)=>{console.log(error)})
   },[])
@@ -28,7 +42,7 @@ function BlogProvidor ({children}) {
 
   return (
     <>
-    <BlogContext.Provider value={{posts,setPosts,users,setUsers,userOn,setUserOn}}>
+    <BlogContext.Provider value={{posts,setPosts,users,setUsers,userOn,setUserOn,search,setSearch,categories,setCategories}}>
     {children}
     </BlogContext.Provider>
     </>

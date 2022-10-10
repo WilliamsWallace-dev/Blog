@@ -7,7 +7,7 @@ import {BlogContext} from "../../context/blog"
 
 const GerenciarPost = ()=>{
 
-  const {posts,setPosts} = useContext(BlogContext);
+  const {posts,setPosts,userOn} = useContext(BlogContext);
   const [update,setUpdate] = useState([]);
 
   //Função para Ler mais sobre o Post
@@ -129,84 +129,87 @@ const GerenciarPost = ()=>{
   }
 
 
+  if(!userOn || userOn === "Error"){
+    return(<></>)
+  }else{
+    return (
+      <>
+      
+        <div className="formulario-container removePost-container ">
+        {
+          posts.map((post,index,posts)=>{
+            if(update === post.id){
+              return(
+                <>
+                  <section className="formulario-container">
+                    <form>
+                      <label>Category</label>
+                      <input type="text" placeholder="Category"></input>
+                      <label>Titulo</label>
+                      <input type="text" placeholder="Titulo"></input>
+                      <label>Resume</label>
+                      <textarea rows="4" cols="50" placeholder="Resume"></textarea>
+                      <label>Description</label>
+                      <textarea rows="4" cols="50" placeholder="Description"></textarea>
+                      <label>Author</label>
+                      <input type="text" placeholder="Subtitulo"></input>
+                      <label>Date</label>
+                      <input type="date" placeholder="Date"></input>
+                      <label>Time Reading</label>
+                      <input type="number" placeholder="Time Reading"></input>
+                    </form>
+                    <button className="" type="button" onClick={(e)=>EditarPost(e,post.id)} >Enviar</button>
+                    <button className="" type="button" onClick={()=>Edit("")} >Cancelar</button>
+                    </section>
+                </>
+              )
+            }
+            // if(update[0] === post.id && update[1] === "view"){
+            //   return(
+            //     <>
+            //       <div className= "List-removePost p-1">
+            //         <section className= "post-container p-1">
+            //           <h5>{post.category}</h5>
+            //           <h3>{post.title}</h3>
+            //           <p>{post.resume}</p>
+            //           <p>{post.description}</p>
+            //           <div className="inf-container mt-3">
+            //               <h6 className = "color-blue-normal">{post.author}</h6>
+            //               <p>{`${post.date} - ${post.time}`}</p>
+            //           </div>
+            //         </section>
+            //         <button className="" type="button" onClick={()=>Card("")} >Voltar</button>
+            //       </div>
+            //     </>
+            //   )
+            // }
+            else return(
+                    <>
+                      
+                        <section className= "List-removePost post-container p-1">
+                          <h5>{post.category}</h5>
+                          <h3>{post.title}</h3>
+                          <div className="container-text-post" style={{maxHeight: 0 +"px",overflow:"hidden"}} >
+                          <p>{post.resume}</p>
+                          <p>{post.description}</p>
+                          </div>
+                          <h6 className = "color-blue-normal">{post.author}</h6>
+                          <p>{`${post.date} - ${post.time}`}</p>
+                        </section>
 
-  return (
-    <>
-    
-      <div className="formulario-container removePost-container ">
-      {
-        posts.map((post,index,posts)=>{
-          if(update === post.id){
-            return(
-              <>
-                <section className="formulario-container">
-                  <form>
-                    <label>Category</label>
-                    <input type="text" placeholder="Category"></input>
-                    <label>Titulo</label>
-                    <input type="text" placeholder="Titulo"></input>
-                    <label>Resume</label>
-                    <textarea rows="4" cols="50" placeholder="Resume"></textarea>
-                    <label>Description</label>
-                    <textarea rows="4" cols="50" placeholder="Description"></textarea>
-                    <label>Author</label>
-                    <input type="text" placeholder="Subtitulo"></input>
-                    <label>Date</label>
-                    <input type="date" placeholder="Date"></input>
-                    <label>Time Reading</label>
-                    <input type="number" placeholder="Time Reading"></input>
-                  </form>
-                  <button className="" type="button" onClick={(e)=>EditarPost(e,post.id)} >Enviar</button>
-                  <button className="" type="button" onClick={()=>Edit("")} >Cancelar</button>
-                  </section>
-              </>
-            )
-          }
-          // if(update[0] === post.id && update[1] === "view"){
-          //   return(
-          //     <>
-          //       <div className= "List-removePost p-1">
-          //         <section className= "post-container p-1">
-          //           <h5>{post.category}</h5>
-          //           <h3>{post.title}</h3>
-          //           <p>{post.resume}</p>
-          //           <p>{post.description}</p>
-          //           <div className="inf-container mt-3">
-          //               <h6 className = "color-blue-normal">{post.author}</h6>
-          //               <p>{`${post.date} - ${post.time}`}</p>
-          //           </div>
-          //         </section>
-          //         <button className="" type="button" onClick={()=>Card("")} >Voltar</button>
-          //       </div>
-          //     </>
-          //   )
-          // }
-          else return(
-                  <>
-                    
-                      <section className= "List-removePost post-container p-1">
-                        <h5>{post.category}</h5>
-                        <h3>{post.title}</h3>
-                        <div className="container-text-post" style={{maxHeight: 0 +"px",overflow:"hidden"}} >
-                        <p>{post.resume}</p>
-                        <p>{post.description}</p>
-                        </div>
-                        <h6 className = "color-blue-normal">{post.author}</h6>
-                        <p>{`${post.date} - ${post.time}`}</p>
-                      </section>
-
-                    <div>
-                        <button style={{padding: .5+"rem" + " " + 1.5 +"rem"}} className="button-deletePost" type="button" onClick={()=>remove(post.id)}>Delete</button>
-                        <button style={{padding: .5+"rem" + " " + 1.5 +"rem"}} className="button-editePost" type="button" onClick={(e)=>View(e)} >Ler Mais</button>  
-                        <button style={{padding: .5+"rem" + " " + 1.5 +"rem"}} className="button-lerMaisPost" type="button" onClick={()=>Edit(post.id)}>Editar</button>                                     
-                    </div>
-                  </>
-                    )
-                })
-              }
-                    </div>
-                  </>
-  )
+                      <div>
+                          <button style={{padding: .5+"rem" + " " + 1.5 +"rem"}} className="button-deletePost" type="button" onClick={()=>remove(post.id)}>Delete</button>
+                          <button style={{padding: .5+"rem" + " " + 1.5 +"rem"}} className="button-editePost" type="button" onClick={(e)=>View(e)} >Ler Mais</button>  
+                          <button style={{padding: .5+"rem" + " " + 1.5 +"rem"}} className="button-lerMaisPost" type="button" onClick={()=>Edit(post.id)}>Editar</button>                                     
+                      </div>
+                    </>
+                      )
+                  })
+                }
+                      </div>
+      </>
+    )
+  }
 }
 
 export default GerenciarPost;

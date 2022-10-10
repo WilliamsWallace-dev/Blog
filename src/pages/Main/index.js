@@ -6,7 +6,7 @@ import {useContext} from "react"
 
 const Main = ()=>{
 
-  const {posts,setPosts} = useContext(BlogContext);
+  const {posts,setPosts,search} = useContext(BlogContext);
 
   // window.onload = creatMain;
 
@@ -20,27 +20,49 @@ const Main = ()=>{
   //   }
 
       
+  if(search.length === 0){
+    return(
+      <>
+      <section className="container mt-8">
+        <h1>Articles</h1>
+        <div className="article-container mx-1">
+          {
+            posts.map((post)=>{
+              return(
+              <Post key = {post.id} id={post.id} category = {post.category} title = {post.title} date = {post.date} time = {post.time} author = {post.author} like = {post.like}>
+                {post.resume}
+              </Post>
+              )
+            })
+          }
+          
+        </div>
+      </section>
+      </>
+    )
+  }else{
+    return(
+      <>
+      <section className="container mt-8">
+        <h1>Articles</h1>
+        <div className="article-container mx-1">
+          {
+            search.map((post)=>{
+              return(
+              <Post key = {post.id} id={post.id} category = {post.category} title = {post.title} date = {post.date} time = {post.time} author = {post.author} like = {post.like}>
+                {post.resume}
+              </Post>
+              )
+            })
+          }
+          
+        </div>
+      </section>
+      </>
+    )
+  }
 
-
-  return(
-    <>
-    <section className="container mt-8">
-      <h1>Articles</h1>
-      <div className="article-container mx-1">
-        {
-          posts.map((post)=>{
-            return(
-            <Post key = {post.id} id={post.id} category = {post.category} title = {post.title} date = {post.date} time = {post.time} author = {post.author} like = {post.like}>
-              {post.resume}
-            </Post>
-            )
-          })
-        }
-        
-      </div>
-    </section>
-    </>
-  )
+  
 }
 
 export default Main;

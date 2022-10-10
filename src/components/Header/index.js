@@ -4,27 +4,64 @@ import { useContext } from "react";
 import { BlogContext } from "../../context/blog";
 
 const Header = () => {
+  
   //Deletar
-  console.log("renderizei Header")
+  console.log("renderizei Header");
+  
+  
 
   //Dados
-  const {userOn} = useContext(BlogContext);
-
+  const {userOn,posts,search,setSearch,categories} = useContext(BlogContext);
+  console.log(categories);
   //Funções
-  const ActiveMenuUse = ()=>{
-    document.querySelector(".nav-menu-user").classList.toggle("active-nav-menu-user");
+  //Limpar Pesquisa
+  const CleanSearch = ()=>{
+    setSearch([]);
+    document.querySelector(".header-search input").value = "";
   }
 
+  //Pesquisa de Posts
+  const SearchPost = (e)=>{
+    if(e.keyCode == 13){
+      let inputText = document.querySelector(".header-search input").value;
+      inputText = inputText.split(" ").filter((e)=>e.length > 2)
+      let postsSearch = [];
+      inputText.forEach((element,index) => {
+        posts.forEach((post)=>{
+          if(post.title.split(" ").filter((e) => e.length > 2 && e.toUpperCase() == element.toUpperCase()).length !== 0 )
+          postsSearch = [...postsSearch,post];
+        })
+      })
+      setSearch(postsSearch);
+    }
+  }
 
+  //Ativar Menu do Usuário
+  const ActiveMenuUse = (e)=>{
+    e.target.nextSibling.classList.toggle("active-nav-menu");
+  }
   //return JSX
   if(!userOn || userOn === "Error"){
     return (
       <>
         <section className="container header-container">
-          <img src={logo} alt="Logo do Blog"></img>
-          <input type="text" name="search" placeholder="Buscar artigos,podcasts,destaques..."></input>
+          <Link to="/"><img src={logo} alt="Logo do Blog" onClick={CleanSearch}></img></Link>
+          <div className="header-search">
+            <input type="search" placeholder="Buscar artigos,podcasts,destaques..." onKeyUp={SearchPost} ></input>
+          </div>
           <div className="nav-link-container">
-            <Link className="p-1 nav-link" to="/">Categorias</Link>
+          <button className=" nav-button button-user" onClick={ActiveMenuUse}>Categorias</button>
+            <div className="nav-menu nav-menu-category">
+              {
+                categories.map((category,index)=>{
+                  return(
+                  <>
+                    <a key={index} className="nav-element">{category.id}</a>
+                  </>
+                  )
+                })
+              }
+            </div>
             <Link className="p-1 nav-link" to="/">About</Link>
             <Link className="p-1 nav-link" to="/login">Login</Link>
           </div>
@@ -37,15 +74,28 @@ const Header = () => {
       <>
       <>
         <section className="container header-container">
-          <img src={logo} alt="Logo do Blog"></img>
-          <input type="text" name="search" placeholder="Buscar artigos,podcasts,destaques..."></input>
+          <img className="logo" src={logo} alt="Logo do Blog"></img>
+          <div className="header-search">
+            <input type="search" name="search" placeholder="Buscar artigos,podcasts,destaques..." onChange = {SearchPost} ></input>
+          </div>
           <div className="nav-link-container">
-            <Link className="p-1 nav-link" to="/">Categorias</Link>
+            <button className=" nav-button button-user" onClick={ActiveMenuUse}>Categorias</button>
+            <div className="nav-menu nav-menu-category">
+              {
+                categories.map((category,index)=>{
+                  return(
+                  <>
+                    <a key={index} className="nav-element">{category.id}</a>
+                  </>
+                  )
+                })
+              }
+            </div>
             <Link className="p-1 nav-link" to="/">About</Link>
-            <button className=" nav-button" onClick={ActiveMenuUse}>{userOn.name}</button>
-            <div className="nav-menu-user">
-              <Link className="nav-link" to="/gerenciarPosts">Gerenciar Posts</Link>
-              <a className="nav-link">Logout</a>
+            <button className=" nav-button button-user" onClick={ActiveMenuUse}>{userOn.name}</button>
+            <div className="nav-menu nav-menu-user">
+              <Link className="nav-element" to="/gerenciarPosts">Gerenciar Posts</Link>
+              <a className="nav-element">Logout</a>
             </div>
           </div>
         </section>

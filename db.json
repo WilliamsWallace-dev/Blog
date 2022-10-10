@@ -2,58 +2,58 @@
   "posts": [
     {
       "id": 2,
-      "category": "Fotografia",
+      "category": "FOTOGRAFIA",
       "title": "Quais as melhores câmeras em 2021?",
       "resume": "Post 1 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
       "description": "Post 1 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Post 1 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
       "author": "Ciclano de tal",
       "date": "Aug 4, 2020",
       "time": "9 min read",
-      "like" : 0
+      "like": 0
     },
     {
       "id": 3,
-      "category": "Series",
+      "category": "SERIES",
       "title": "As 10 series mais populares em 2022",
       "resume": "Post 1 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
       "description": "Post 1 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Post 1 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
       "author": "Lorenzo",
       "date": "Dec 22, 2022",
       "time": "6 min read",
-      "like" : 0
+      "like": 0
     },
     {
       "id": 5,
-      "category": "Tecnologia",
+      "category": "TECNOLOGIA",
       "title": "Desenvolvedores no brasil",
       "resume": "Vagas para desenvolvedores nas melhores empresas do Vale do Silício. As melhores empresas dos EUA contratam desenvolvedores da Turing. Salário mais alto. 100% remoto.",
       "description": "Post 1 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Post 1 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
       "author": "Fulano de tal",
       "date": "Aug 2, 2020",
       "time": "8 min read",
-      "like" : 0
+      "like": 0
     },
     {
       "id": 6,
-      "category": "Emprego",
+      "category": "EMPREGO",
       "title": "Desenvolvedores no Brasil",
       "resume": "Vagas para desenvolvedores nas melhores empresas do Vale do Silício. As melhores empresas dos EUA contratam desenvolvedores da Turing. Salário mais alto. 100% remoto.",
       "description": "Post 1 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Post 1 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
       "author": "Fulano de tal",
       "date": "Aug 2, 2020",
       "time": "8 min read",
-      "like" : 0
+      "like": 0
     },
     {
       "id": 7,
-      "category": "Jogos",
+      "category": "JOGOS",
       "title": "Ultimos jogos lancados em 2022",
       "resume": "O ano de 2022 ainda reserva vários grandes lançamentos de games ... Nintendo Switch Sports, nova versão do jogo que fez sucesso no Wii,",
       "description": "Post 1 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Post 1 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
       "author": "Fulano de tal",
       "date": "Aug 2, 2020",
       "time": "8 min read",
-      "like" : 0
+      "like": 0
     }
   ],
   "users": [
@@ -63,6 +63,23 @@
       "password": "a",
       "name": "Administrador",
       "login": false
+    }
+  ],
+  "categories": [
+    {
+      "id": "TECNOLOGIA"
+    },
+    {
+      "id": "JOGOS"
+    },
+    {
+      "id": "EMPREGO"
+    },
+    {
+      "id": "SERIES"
+    },
+    {
+      "id": "FUTEBOL"
     }
   ]
 }
