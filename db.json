@@ -1,28 +1,6 @@
 {
   "posts": [
     {
-      "id": 2,
-      "category": "FOTOGRAFIA",
-      "title": "Quais as melhores câmeras em 2021?",
-      "resume": "Post 1 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-      "description": "Post 1 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Post 1 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-      "author": "Ciclano de tal",
-      "date": "Aug 4, 2020",
-      "time": "9 min read",
-      "like": 0
-    },
-    {
-      "id": 3,
-      "category": "SERIES",
-      "title": "As 10 series mais populares em 2022",
-      "resume": "Post 1 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-      "description": "Post 1 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Post 1 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-      "author": "Lorenzo",
-      "date": "Dec 22, 2022",
-      "time": "6 min read",
-      "like": 0
-    },
-    {
       "id": 5,
       "category": "TECNOLOGIA",
       "title": "Desenvolvedores no brasil",
@@ -77,9 +55,6 @@
     },
     {
       "id": "SERIES"
-    },
-    {
-      "id": "FUTEBOL"
     }
   ]
 }

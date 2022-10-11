@@ -10,7 +10,7 @@ function BlogProvidor ({children}) {
 
   const [categories,setCategories] = useState([]);
 
-  const [search,setSearch] = useState([]);
+  const [search,setSearch] = useState("");
 
   const [posts,setPosts] = useState([]);
   useEffect(()=>{
